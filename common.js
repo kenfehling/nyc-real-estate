@@ -113,10 +113,6 @@ const makeScatterPlot = (container_selector, ndx, width, height,
   }
 };
 
-$(() => {
-  $('.time').html('Monday, December 10&nbsp; 11:17 PM');
-});
-
 const boroughToIndexMap = mori.toJs(mori.zipmap(
   BOROUGHS,
   mori.range(BOROUGHS.length)));
