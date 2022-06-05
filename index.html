@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <script src='lib/font-awesome-v5.4.2.js'></script>
+    <script src='lib/jquery-3.3.1.min.js'></script>
+    <script src='lib/d3.js'></script>
+    <script src='lib/crossfilter.js'></script>
+    <script src='lib/dc.js'></script>
+    <script src='lib/mori.js'></script>
+    <script src="utils/misc.js"></script>
+    <script src="utils/d3.js"></script>
+    <script src='settings.js'></script>
+    <script src='common.js'></script>
+    <script src='main.js'></script>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel='stylesheet' href='lib/dc.css' />
+    <link rel='stylesheet' href='style.css' />
+    <title>CSE 332 - HW 5</title>
+</head>
+<body>
+<header>
+    <a href='/' id='home' class='icon reset'><i class="fas fa-chart-pie"></i></a>
+    <div class='title'>NYC Housing Sales: 2017</div>
+    <div class='menu-item reset'>Reset all</div>
+    <div class='time'></div>
+</header>
+<div class='left frame'></div>
+<div class='right frame'></div>
+<div class='bottom frame'></div>
+<main>
+    <table>
+        <tr>
+            <td>
+                <h3 class='plot-title'>Coordinates</h3>
+                <div id="map" class='scatter plot'></div>
+            </td>
+            <td>
+                <h3 class='plot-title'>Sales by Borough</h3>
+                <div id="borough" class='row plot'></div>
+            </td>
+            <td rowspan='2'>
+                <h3 class='plot-title'>Sales by Neighborhood</h3>
+                <div id="neighborhood" class='row plot'></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3 class='plot-title'>PCA Plot</h3>
+                <div id="pca" class='scatter plot'></div>
+            </td>
+            <td>
+                <h3 class='plot-title'>Price / Ft<sup> 2</sup></h3>
+                <div id="price_sq_ft" class='scatter plot'></div>
+            </td>
+        </tr>
+    </table>
+</main>
+</body>
+</html>
