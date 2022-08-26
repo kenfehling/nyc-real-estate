@@ -69,7 +69,6 @@ const createBoroughPlot = (ndx) => {
 const createNeighborhoodPlot = (ndx) => {
   const {width, height} = getSize('#neighborhood', false);
   const neighborhoodDim  = ndx.dimension(d => d.NEIGHBORHOOD);
-  // const group = neighborhoodDim.group().reduceCount();
   const group = neighborhoodDim.group().reduce(
     function (p, v) {
       p.count = p.count ? p.count + 1 : 1;
@@ -83,7 +82,6 @@ const createNeighborhoodPlot = (ndx) => {
     function () { return {}; }
   )
   const totalHeight = height * 2 + 37;
-  const nBars = 31;
   const chart = dc.rowChart('#neighborhood')
     .width(width - 60)
     .height(totalHeight)
@@ -98,8 +96,8 @@ const createNeighborhoodPlot = (ndx) => {
     .valueAccessor(d => {
       return d.value.count;
     })
-    .fixedBarHeight(totalHeight / nBars * 0.67)
-    .cap(nBars)
+    .fixedBarHeight(totalHeight / N_NEIGHBORHOOD_BARS * 0.67)
+    .cap(N_NEIGHBORHOOD_BARS)
     .othersGrouper((top, others) => {
       return top.filter(item => item.value.count > 0)
     });
