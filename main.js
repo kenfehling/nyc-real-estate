@@ -122,5 +122,18 @@ $(() => {
     event.preventDefault();
     dc.filterAll();
     dc.renderAll();
-  })
+  });
+
+  // Show about dialog
+  $('.about').click((event) => {
+    event.preventDefault();
+    $("#about-dialog").dialog({
+      modal: true,
+      buttons: {
+        Ok: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+  });
 });

@@ -3,7 +3,9 @@
 <head>
     <meta charset='UTF-8'>
     <script src='lib/font-awesome-v5.4.2.js'></script>
-    <script src='lib/jquery-3.3.1.min.js'></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
     <script src='lib/d3.js'></script>
     <script src='lib/crossfilter.js'></script>
     <script src='lib/dc.js'></script>
@@ -18,9 +20,10 @@
 </head>
 <body>
 <header>
-    <a href='/' id='home' class='icon reset'><i class="fas fa-chart-pie"></i></a>
-    <div class='title'>NYC Housing Sales: 2017</div>
+    <a href='/' id='home-icon' class='icon reset'><i class="fas fa-chart-pie"></i></a>
+    <div class='title'>NYC Housing Sales (2017)</div>
     <div class='menu-item reset'>Reset all</div>
+    <div class='menu-item right about'>About</div>
 </header>
 <div class='left frame'></div>
 <div class='right frame'></div>
@@ -47,5 +50,24 @@
         <div id="pca" class='scatter plot'></div>
     </div>
 </main>
+<div id="about-dialog" title="About">
+    <p>
+        Created by
+        <a target='_blank' href="https://www.kenfehling.com">Ken Fehling</a>
+        for a data visualization class at
+        <a target='_blank' href="https://www.cs.stonybrook.edu">Stony Brook University</a>.
+    </p>
+    <p>
+        Data source:
+        <a target='_blank' href="https://opendata.cityofnewyork.us/data/">
+            NYC Open Data
+        </a>
+    </p>
+    <p>
+        <a target='_blank' href="https://github.com/kenfehling/nyc-real-estate">
+            <i class="fab fa-github"></i></a>
+        <a target='_blank' href="https://github.com/kenfehling/nyc-real-estate">
+            Source code</a>
+</div>
 </body>
 </html>
